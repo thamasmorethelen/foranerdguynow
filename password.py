@@ -1,6 +1,4 @@
 # Password Generator a program
-import string
-import random
 from password_genny import password_generator
 # Function that captures user input
 def user_num():
