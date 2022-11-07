@@ -2,20 +2,16 @@ import random
 import string
 
 # password generator as a function
-def password_generator():
+def password_generator(num):
     password = []
-    while len(password) < 15:
+    while len(password) < int(num):
         choice = random.choice(string.printable)
         if choice not in string.whitespace:
             password.append(choice)
     return ''.join(password)
 
 
-print('Printed as a Function:')
-print(password_generator())
-
 class Password_Generator:
-
     def generate(self):
         password = []
         while len(password) < 15:
@@ -23,7 +19,3 @@ class Password_Generator:
             if choice not in string.whitespace:
                 password.append(choice)
         return ''.join(password)
-gen = Password_Generator()
-
-print("Printed as a class:")
-print(gen.generate())
